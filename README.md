@@ -4,7 +4,15 @@
 
 > `AFNetworkActivityLogger` listens `AFNetworkingTaskDidStartNotification` and `AFNetworkingTaskDidFinishNotification` notifications, which are posted by AFNetworking as session tasks are started and finish. For further customization of logging output, users are encouraged to implement desired functionality by creating new objects that conform to `AFNetworkActivityLoggerProtocol`.
 
+
+
+## 4.0.0
+
+4.0.0 featured
+
+
 ## 2.x -> 3.x Migration
+
 3.0.0 featured the following breaking API changes:
 
 * The log `level` property is now found on the individual unique loggers, rather than the shared logger. This allows for more advanced customization options for logging level.
@@ -48,7 +56,7 @@ NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSURLRequest *  _
     return !([[request URL] baseURL] isEqualToString:@"httpbin.org"])
 }];
 [testLogger setFilterPredicate:predicate];
-```    
+```
 
 ## Custom Loggers
 By default, the shared logger is configured with an `AFNetworkActivityConsoleLogger`.
